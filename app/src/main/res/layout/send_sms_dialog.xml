@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="smsInfo"
+            type="com.android.dogs.model.SmsInfo" />
+    </data>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <EditText
+            android:id="@+id/smsDestination"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="To:"
+            android:hint="To:"
+            android:maxLines="1"
+            android:gravity="center_horizontal"
+            android:inputType="number" />
+        <EditText
+            android:id="@+id/smsText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="Sms Text"
+            android:hint="Sms Text"
+            android:text="@{smsInfo.text}"
+            android:maxLines="1"
+            android:gravity="center_horizontal"
+            android:inputType="number" />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="center"
+            android:imageUrl="@{smsInfo.imageUrl}"/>
+    </LinearLayout>
+</layout>
